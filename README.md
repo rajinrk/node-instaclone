@@ -1,2 +1,2 @@
 # node-instaclone
-mini insta clone
+first commit of node instaclone
