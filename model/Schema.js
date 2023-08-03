@@ -1,4 +1,4 @@
-const { mongoose } = require("mongoose");
+const  mongoose  = require("mongoose");
 
 const PostSchema = mongoose.Schema({
   name: { type: String },
@@ -9,5 +9,5 @@ const PostSchema = mongoose.Schema({
   Date: { type: String } 
 });
 
-const Post = mongoose.model("Post", PostSchema);
-module.exports = Post;
+const modelPost = mongoose.model("Post", PostSchema);
+module.exports = modelPost;

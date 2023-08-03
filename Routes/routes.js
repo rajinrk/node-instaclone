@@ -1,12 +1,12 @@
 const express = require("express");
-const posts = require("../model/Schema");
+const Post = require("../model/Schema");
 const postRoute = express.Router();
 const multer = require("multer");
 const path=require('path')
 
 
 postRoute.get("/post", (req, res) => {
-  posts
+  Post
     .find()
     .then((result) => {
       res.status(200).json({
@@ -40,7 +40,7 @@ const upload = multer({ storage });
 
 postRoute.post("/new", upload.single("image"), (req, res) => {
   const { name, location, likes, description } = req.body;
-  const Post = new posts({
+  const posted = new Post({
     name,
     location,
     likes,
@@ -49,7 +49,7 @@ postRoute.post("/new", upload.single("image"), (req, res) => {
     Date: new Date().toDateString()
   });
 
-  Post
+  posted
     .save()
     .then((result) => {
       res.status(200).json({
