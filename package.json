@@ -7,7 +7,7 @@
     "start": "node index.js",
     "build": "npm install"
   },
-  "author": "Kishan M A",
+  "author": "Rajin radhakrishnan",
   "license": "ISC",
   "dependencies": {
     "body": "^5.1.0",
