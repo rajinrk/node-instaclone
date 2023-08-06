@@ -48,7 +48,7 @@ postRoute.post("/new", upload.single("image"), (req, res) => {
     PostImage: req.file.filename,
     Date: new Date().toDateString()
   });
-console.log(req.file)
+
   posted
     .save()
     .then((result) => {
